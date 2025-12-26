@@ -1,0 +1,9 @@
+@media (max-width: 768px) {
+  .hero-section h1 {
+    font-size: 30px;
+  }
+
+  .hero-section {
+    padding: 60px 20px;
+  }
+}

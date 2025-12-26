@@ -1,0 +1,103 @@
+/* Global */
+body {
+  font-family: var(--font-family);
+  color: var(--dark-text);
+  background-color: #ffffff;
+}
+
+/* Header */
+.site-header {
+  padding: 12px 0;
+}
+
+.navbar-brand img {
+  height: 36px;
+}
+.btn-blue{
+  background-color: var(--theme-color);
+}
+.btn-blue:hover{
+  border-color: var(--theme-color);
+  color:var(--theme-color) !important;
+}
+.btn-outline-blue{
+  border-color: var(--theme-color);
+}
+.btn-outline-blue:hover{
+   background-color: var(--theme-color);
+  color:var(--bg-light);
+}
+.txt-blue{
+  color:var(--theme-color);
+}
+
+/* Hero */
+.hero-section {
+  padding: 80px 0;
+  background: url(../assets//images/hero-bg.png) center;
+
+}
+
+.hero-section h1 {
+  font-weight: 700;
+  font-size: 42px;
+}
+
+.hero-section h1 span {
+  color: var(--primary-color);
+}
+
+.hero-description {
+  max-width: 720px;
+  margin: 20px auto;
+  color: var(--light-text);
+}
+
+.hero-actions .btn {
+  margin: 8px;
+}
+.hero-section .small-title {
+   border: 1px solid #ccc;
+   border-radius: 50px;
+   padding: 0.65rem;
+   width: 20vw;
+   margin:0 auto 20px auto;
+   font-size: 0.85rem;
+   border-color: #9ACCFF;
+   color: #63657E;
+}
+
+
+/* Comparison */
+.comparison-section {
+  padding: 80px 0;
+  background-color: var(--bg-light);
+}
+
+.comparison-card {
+  padding: 30px;
+  border-radius: var(--border-radius);
+  background: #fff;
+}
+
+/* Steps */
+.steps-section {
+  padding: 80px 0;
+}
+
+.step-card {
+  padding: 20px;
+}
+
+.step-number {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+/* Footer */
+.site-footer {
+  padding: 30px 0;
+  background: #0f172a;
+  color: #fff;
+}
