@@ -1,5 +1,5 @@
 import React from 'react'
-import SiteLogo from '../assets/images/LeadcrmLogo.png';
+import {SiteLogo} from '../assets'
 
 const Navbar = () => {
   return (

@@ -1,10 +1,11 @@
-import React from 'react'
+import React from 'react';
+import{RocketIco} from '../assets'
 
 const Hero = () => {
   return (
    <section className="hero-section text-center">
       <div className="container">
-        <div className='small-title'>Thousands of Professional using LeadCRM</div>
+        <div className='small-title'><img className='mr-2' src={RocketIco} />Thousands of Professional using LeadCRM</div>
         <h1>
           LinkedIn CRM Integration <br />
           <span>Capture, Sync and Enrich in Both Ways</span>

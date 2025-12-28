@@ -4,6 +4,7 @@ import Hero from './components/Hero';
 import Comparison from './components/Comparison';
 import Steps from './components/Steps';
 import Footer from './components/Footer';
+import AutoScroll from './components/AutoScroll';
 
 function App() {
 
@@ -11,7 +12,8 @@ function App() {
     <>
       <Navbar/>
       <main>
-        <Hero/>
+        <Hero />
+         <AutoScroll/>
         <Comparison/>
         <Steps/>
       </main>
