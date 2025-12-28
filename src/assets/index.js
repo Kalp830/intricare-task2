@@ -4,6 +4,7 @@ import SiteLogo from './images/LeadcrmLogo.png';
 import RocketIco from './icons/rocket-ico.png';
 import WithoutLCM from './images/without-lcm.jpg';
 import WithLCM from './images/with-lcm.jpg';
+import CtaImg from './images/save.png'
 
 // Export Icons
 import UserIco from './icons/user-ico.png';
@@ -20,7 +21,8 @@ export {
     UserIco,
     HandIco,
     MappingIco,
-    WaterfallIco
+    WaterfallIco,
+    CtaImg
 
 
 };

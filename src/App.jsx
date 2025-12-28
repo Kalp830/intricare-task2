@@ -5,6 +5,7 @@ import Comparison from './components/Comparison';
 import Steps from './components/Steps';
 import Footer from './components/Footer';
 import AutoScroll from './components/AutoScroll';
+import Testimonials from './components/Testimonials';
 
 function App() {
 
@@ -15,7 +16,8 @@ function App() {
         <Hero />
          <AutoScroll/>
         <Comparison/>
-        <Steps/>
+        <Steps />
+        <Testimonials/>
       </main>
       <Footer/>
     </>

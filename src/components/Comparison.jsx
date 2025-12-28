@@ -1,8 +1,8 @@
 
 import React from 'react';
-import{Container, Row, Col, Button} from 'react-bootstrap'
+import{Container, Row, Col, Button, Image} from 'react-bootstrap'
 import { ArrowRepeat, Cpu, Database, Layers, X } from 'react-bootstrap-icons';
-import { WithoutLCM, WithLCM } from '../assets';
+import { WithoutLCM, WithLCM, CtaImg } from '../assets';
 
 const Comparison = () => {
   return (
@@ -148,13 +148,20 @@ const Comparison = () => {
     </Row>
     
     {/* CTA Section */}
-    <div className="cta-section">
-      <Button className="cta-button">
-        Start Using LeadCRM Now
-      </Button>
-      <div className="save-time-text">
-        Save 40+ hours every Month
-      </div>
+        <div className="cta-section">
+          <Row>
+            <Col lg={12} className="cta-wrapper">
+              <Button className="cta-button">Start Using LeadCRM Now</Button>
+              <Image 
+              src={CtaImg}
+              alt="savehours"
+              fluid
+              style={{ width: "19%", height: "auto" }}
+
+             />
+            </Col>
+
+          </Row>
     </div>
   </Container>
       
