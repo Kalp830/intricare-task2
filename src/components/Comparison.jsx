@@ -1,12 +1,14 @@
 
 import React from 'react';
-import{Container, Row, Col, Button, Image} from 'react-bootstrap'
+import{Container, Row, Col, Image} from 'react-bootstrap'
 import { ArrowRepeat, Cpu, Database, Layers, X } from 'react-bootstrap-icons';
 import { WithoutLCM, WithLCM, CtaImg } from '../assets';
+import CtaButton from './CtaButton';
 
 const Comparison = () => {
   return (
     <>
+      <section>
   <Container>
     <h1 className="section-title">
       Every LinkedIn Prospector faces these daily challenges
@@ -151,7 +153,7 @@ const Comparison = () => {
         <div className="cta-section">
           <Row>
             <Col lg={12} className="cta-wrapper">
-              <Button className="cta-button">Start Using LeadCRM Now</Button>
+              <CtaButton text="Start Using LeadCRM Now"/>
               <Image 
               src={CtaImg}
               alt="savehours"
@@ -164,7 +166,7 @@ const Comparison = () => {
           </Row>
     </div>
   </Container>
-      
+</section>      
       </>
   )
 }

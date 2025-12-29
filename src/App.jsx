@@ -6,6 +6,7 @@ import Steps from './components/Steps';
 import Footer from './components/Footer';
 import AutoScroll from './components/AutoScroll';
 import Testimonials from './components/Testimonials';
+import LeadCrmSupport from './components/LeadCrmSupport';
 
 function App() {
 
@@ -17,7 +18,8 @@ function App() {
          <AutoScroll/>
         <Comparison/>
         <Steps />
-        <Testimonials/>
+        <Testimonials />
+        <LeadCrmSupport/>
       </main>
       <Footer/>
     </>

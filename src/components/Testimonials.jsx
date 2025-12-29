@@ -1,7 +1,11 @@
-import React from 'react';
-import { Star, StarFill } from 'react-bootstrap-icons';
+import { useRef } from 'react';
+import { StarFill, ChevronLeft, ChevronRight } from 'react-bootstrap-icons';
+import { TestimonialIco } from '../assets';
+import { Container } from 'react-bootstrap';
 
 const Testimonials = () => {
+  const scrollRef = useRef(null);
+
   const testimonials = [
     {
       id: 1,
@@ -53,84 +57,82 @@ const Testimonials = () => {
     },
   ];
 
+  const scroll = (direction) => {
+    if (scrollRef.current) {
+      const scrollAmount = 480; 
+      const currentScroll = scrollRef.current.scrollLeft;
+      const targetScroll = direction === 'left' 
+        ? currentScroll - scrollAmount 
+        : currentScroll + scrollAmount;
+      
+      scrollRef.current.scrollTo({
+        left: targetScroll,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   return (
     <> 
-    
-     <div className="testimonial-section">
+      <Container>
+      <div className="testimonial-section">
         <div className="testimonial-header">
           <h2 className="testimonial-title">What people are saying about LeadCRM</h2>
-        </div>
-        
-        <div className="testimonial-scroll-container">
-          <div className="testimonial-scroll-wrapper">
-            {/* First set of testimonials */}
-            <div className="testimonial-track">
-              {testimonials.map((testimonial) => (
-                <div key={`testimonial-1-${testimonial.id}`} className="testimonial-card">
-                  <p className="testimonial-text">"{testimonial.text}"</p>
-                  
-                  <div className="testimonial-rating">
-                          <div className="capterra-badge">C</div>
-                          
-                    <StarFill className="rating-icon" fill="currentColor" />
-                    <StarFill className="rating-icon" fill="currentColor" />
-                    <StarFill className="rating-icon" fill="currentColor" />
-                    <StarFill className="rating-icon" fill="currentColor" />
-                    <StarFill className="rating-icon" fill="currentColor" />
-                  </div>
-                  
-                  <div className="testimonial-divider"></div>
-                  
-                  <div className="testimonial-author">
-                    <img 
-                      src={testimonial.avatar} 
-                      alt={testimonial.name}
-                      className="author-avatar"
-                    />
-                    <div className="author-info">
-                      <h4 className="author-name">{testimonial.name}</h4>
-                      <p className="author-company">{testimonial.company}</p>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-            
-            {/* Duplicate set for seamless loop */}
-            <div className="testimonial-track">
-              {testimonials.map((testimonial) => (
-                <div key={`testimonial-2-${testimonial.id}`} className="testimonial-card">
-                  <p className="testimonial-text">"{testimonial.text}"</p>
-                  
-                  <div className="testimonial-rating">
-                    <div className="capterra-badge">C</div>
-                    <StarFill className="rating-icon" fill="currentColor" />
-                    <StarFill className="rating-icon" fill="currentColor" />
-                    <StarFill className="rating-icon" fill="currentColor" />
-                    <StarFill className="rating-icon" fill="currentColor" />
-                    <StarFill className="rating-icon" fill="currentColor" />
-                  </div>
-                  
-                  <div className="testimonial-divider"></div>
-                  
-                  <div className="testimonial-author">
-                    <img 
-                      src={testimonial.avatar} 
-                      alt={testimonial.name}
-                      className="author-avatar"
-                    />
-                    <div className="author-info">
-                      <h4 className="author-name">{testimonial.name}</h4>
-                      <p className="author-company">{testimonial.company}</p>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
+          
+          <div className="testimonial-nav-arrows">
+            <button 
+              className="testimonial-arrow testimonial-arrow-left" 
+              onClick={() => scroll('left')}
+              aria-label="Previous testimonials"
+            >
+              <ChevronLeft size={24} />
+            </button>
+            <button 
+              className="testimonial-arrow testimonial-arrow-right" 
+              onClick={() => scroll('right')}
+              aria-label="Next testimonials"
+            >
+              <ChevronRight size={24} />
+            </button>
           </div>
         </div>
-      </div>
-
+        
+        <div className="testimonial-scroll-container" ref={scrollRef}>
+          <div className="testimonial-track">
+            {testimonials.map((testimonial) => (
+              <div key={testimonial.id} className="testimonial-card">
+                <p className="testimonial-text">"{testimonial.text}"</p>
+                
+                <div className="testimonial-rating">
+                  <div className="testimonial-icon-wrapper">
+                    <img src={TestimonialIco} alt="Capterra" />
+                  </div>
+                  <StarFill className="rating-icon" fill="currentColor" />
+                  <StarFill className="rating-icon" fill="currentColor" />
+                  <StarFill className="rating-icon" fill="currentColor" />
+                  <StarFill className="rating-icon" fill="currentColor" />
+                  <StarFill className="rating-icon" fill="currentColor" />
+                </div>
+                
+                <div className="testimonial-divider"></div>
+                
+                <div className="testimonial-author">
+                  <img 
+                    src={testimonial.avatar} 
+                    alt={testimonial.name}
+                    className="author-avatar"
+                  />
+                  <div className="author-info">
+                    <h4 className="author-name">{testimonial.name}</h4>
+                    <p className="author-company">{testimonial.company}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+        </div>
+        </Container>
     </>
   );
 };
