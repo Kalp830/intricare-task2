@@ -7,6 +7,9 @@ import Footer from './components/Footer';
 import AutoScroll from './components/AutoScroll';
 import Testimonials from './components/Testimonials';
 import LeadCrmSupport from './components/LeadCrmSupport';
+import LinkedPower from './components/LinkedPower';
+import TabSection from './components/TabSection';
+
 
 function App() {
 
@@ -19,7 +22,9 @@ function App() {
         <Comparison/>
         <Steps />
         <Testimonials />
-        <LeadCrmSupport/>
+        <TabSection />
+        <LeadCrmSupport />
+        <LinkedPower />
       </main>
       <Footer/>
     </>

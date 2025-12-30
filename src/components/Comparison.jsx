@@ -2,7 +2,7 @@
 import React from 'react';
 import{Container, Row, Col, Image} from 'react-bootstrap'
 import { ArrowRepeat, Cpu, Database, Layers, X } from 'react-bootstrap-icons';
-import { WithoutLCM, WithLCM, CtaImg } from '../assets';
+import { WithoutLCM, WithLCM, CtaImg, BiDirectional, UserIco, CrmIco, AiIco } from '../assets';
 import CtaButton from './CtaButton';
 
 const Comparison = () => {
@@ -14,7 +14,7 @@ const Comparison = () => {
       Every LinkedIn Prospector faces these daily challenges
     </h1>
     
-    <Row className="align-items-stretch offset-1">
+    <Row className="align-items-stretch offset-lg-1">
       {/* Without LeadCRM Column */}
       <Col lg={5} className="mb-4">
             <div className="comparison-card">
@@ -108,7 +108,7 @@ const Comparison = () => {
           
           <div className="feature-item">
             <div className="feature-icon icon-blue">
-              <ArrowRepeat size={24} />
+               <img src={BiDirectional} alt="Bi-directional" />
             </div>
             <div className="feature-content">
               <h5>Complete Bi-Directional Sync</h5>
@@ -118,7 +118,7 @@ const Comparison = () => {
           
           <div className="feature-item">
             <div className="feature-icon icon-purple">
-              <Database size={24} />
+             <img src={UserIco} alt="Contact" width="50" height="50" />
             </div>
             <div className="feature-content">
               <h5>700M+ Contacts + Enrichment</h5>
@@ -128,7 +128,7 @@ const Comparison = () => {
           
           <div className="feature-item">
             <div className="feature-icon icon-orange">
-              <Layers size={24} />
+            <img src={CrmIco} alt="Contact" />
             </div>
             <div className="feature-content">
               <h5>CRM Overlay on LinkedIn</h5>
@@ -138,7 +138,7 @@ const Comparison = () => {
           
           <div className="feature-item">
             <div className="feature-icon icon-green">
-              <Cpu size={24} />
+            <img src={AiIco} alt="Ai" />
             </div>
             <div className="feature-content">
               <h5>AI Response + Templates + Bulk Exports</h5>
