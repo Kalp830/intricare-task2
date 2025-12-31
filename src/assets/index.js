@@ -26,7 +26,7 @@ import HandIco from './icons/hand-ico.png';
 import MappingIco from './icons/mapping-ico.png';
 import WaterfallIco from './icons/waterfall-icon.png';
 import TestimonialIco from './icons/testi-icon.png';
-import CallIco from './icons/call-ico.svg';
+import CallIco from './icons/cellPhone.svg';
 import FaxIco from './icons/fax-ico.svg';
 import QuestionIco from './icons/question.svg';
 import BiDirectional from './icons/bi-directional.png';
