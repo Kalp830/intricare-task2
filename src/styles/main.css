@@ -1209,6 +1209,15 @@ body {
   .section-title {
     font-size: 2rem;
   }
+  .hero-actions .offset-3{
+      margin-left: 0;
+  }
+  .step-card{
+    margin-bottom: 1rem;
+  }
+  .enrichment-demo img{
+      width: 100%;
+}
 
   .custom-tabs {
     gap: 20px;
@@ -1329,3 +1338,7 @@ body {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
   transition: all 0.3s ease;
 }
+.nav-link{
+  font-weight: 600;
+}
+
